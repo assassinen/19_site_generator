@@ -63,13 +63,12 @@ def site_generator():
                                                       article['source']))
         rendered_html = render_article_html(template, markdown_text,
                                             article['title'])
-        html_article_path = get_html_filepath(article['source']
-        save_html(rendered_html, html_article_path, OUTPUT_FOLDER))
+        html_article_path = get_html_filepath(article['source'], OUTPUT_FOLDER)
+        save_html(rendered_html, html_article_path)
         article['source'] = html_article_path
     template = jinja_environment.get_template(INDEX_FILE)
     rendered_index_html = render_index_html(template, config)
-    save_html(rendered_index_html, get_html_filepath(INDEX_FILE,
-                                                     OUTPUT_FOLDER))
+    save_html(rendered_index_html, get_html_filepath(INDEX_FILE))
     
 
 if __name__ == '__main__':
