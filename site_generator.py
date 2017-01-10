@@ -46,7 +46,7 @@ def render_article_html(template, markdown_text, article_title):
                                            extensions=['codehilite',
                                                        'fenced_code'])
     return template.render(title=article_title,
-                           index_href=os.path.join('..', INDEX_FILE),
+                           index_href=os.path.join('..', '..', INDEX_FILE),
                            content=html_from_markdown)
 
 
