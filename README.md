@@ -1,6 +1,9 @@
 # Encyclopedia
 
-[TODO. There will be project description]
+The script generates html pages from markdown according to config.json.
+
+## How To Use
+Install dependencies `pip install -r requirements.txt`. Run the script.
 
 # Project Goals
 
