@@ -28,17 +28,24 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block content %}
-  <ol class = "breadcrumb">
-     <li><a href = {{index_href}}>Главная</a></li>
-     <li class = "active">{{title}}</li>
-  </ol>
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-8">
-        <h2>{{title}}</h2>
-        <p>{{content}}</p>
+  <div class="row">
+    <div class="col-xs-12">
+      <ol class = "breadcrumb">
+         <li><a href = {{index_href}}>Главная</a></li>
+         <li class = "active">{{title}}</li>
+      </ol>
     </div>
+    <div class="col-xs-12">
+       <h3>{{title}}</h3>
+       <hr>
+    </div>
+  </div>
+  
+  <div class="row row-content">
+    <div class="col-xs-12 col-sm-10">
+      {{content}}
+    </div>
+  </div>
 {% endblock %}
 
 {% block script_sources %}

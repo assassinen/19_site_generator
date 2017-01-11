@@ -1,6 +1,6 @@
 import json
 import os
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 import jinja2
 import markdown
@@ -46,7 +46,7 @@ def render_article_html(template, markdown_text, article_title):
                                            extensions=['codehilite',
                                                        'fenced_code'])
     return template.render(title=article_title,
-                           index_href=os.path.join('..', '..', INDEX_FILE),
+                           index_href=PurePosixPath('..', '..', INDEX_FILE),
                            content=html_from_markdown)
 
 
@@ -65,7 +65,7 @@ def site_generator():
                                             article['title'])
         html_article_path = get_html_filepath(article['source'], OUTPUT_FOLDER)
         save_html(rendered_html, html_article_path)
-        article['source'] = html_article_path
+        article['source'] = PurePosixPath(html_article_path)
     template = jinja_environment.get_template(INDEX_FILE)
     rendered_index_html = render_index_html(template, config)
     save_html(rendered_index_html, get_html_filepath(INDEX_FILE))

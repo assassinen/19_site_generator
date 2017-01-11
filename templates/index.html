@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
-head_sources
-{% block title %}Статьи{% endblock %}
+{% block title %}Энциклопедия{% endblock %}
 {% block head_sources %}
 <link rel="icon" href="media/favicon.ico">
 <!-- Bootstrap core CSS -->
@@ -28,26 +27,31 @@ head_sources
 {% endblock %}
 {% block header_link %}#{% endblock %}
 {% block content %}
-  <ol class = "breadcrumb">
-     <li class = "active">Главная</li>
-  </ol>
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-8">
-        {% for topic in config['topics'] %}
-          <h4>{{ topic['title'] }}</h4>
-          <ul class="module_list">
-            {% for article in config['articles'] %}
-              {% if article['topic']==topic['slug'] %}
-                <li><a href="{{ article['source'] }}">{{ article['title'] }}</a></li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        {% endfor %}
+  <div class="row">
+    <div class="col-xs-12">
+       <h3>Энциклопедия</h3>
+       <hr>
     </div>
+  </div>  
+  <div class="row row-content">
+    <div class="col-xs-12">
+      <div class="row row-content">
+        {% for topic in config['topics'] %}
+          <div class="col-sm-4">
+            <h4>{{ topic['title'] }}</h4>
+            <ul class="module_list">
+              {% for article in config['articles'] %}
+                {% if article['topic']==topic['slug'] %}
+                  <li><a href="{{ article['source'] }}">{{ article['title'] }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 {% endblock %}
-
 {% block script_sources %}
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -58,4 +62,3 @@ head_sources
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="js/ie10-viewport-bug-workaround.js"></script>
 {% endblock %}
-

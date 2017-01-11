@@ -1,9 +1,9 @@
 # Encyclopedia
 
-The script generates html pages from markdown according to config.json. You can check it [here](https://noerten.github.io/19_site_generator/)
+The script generates html pages from markdown according to config.json. You can check the result [here](https://noerten.github.io/19_site_generator/)
 
 ## How To Use
-Install dependencies `pip install -r requirements.txt`. Run the script.
+Install dependencies `pip install -r requirements.txt`. Run the script `python site_generator.py`.
 
 # Project Goals
 

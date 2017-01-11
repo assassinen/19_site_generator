@@ -33,35 +33,40 @@
 <![endif]-->
 
   </head>
-
   <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="..\..\index.html">Documentation Generator</a>
+          <a class="navbar-brand" href="../../index.html">Documentation Generator</a>
         </div>
       </div>
     </nav>
-
     <div class="container">
-		
-  <ol class = "breadcrumb">
-     <li><a href = ..\..\index.html>Главная</a></li>
-     <li class = "active">Полезные приёмы</li>
-  </ol>
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-8">
-        <h2>Полезные приёмы</h2>
-        <p><p>Тут – разные мелочи, на которых обычно спотыкаются новички в Питоне. Шагай свободно.</p>
+    	<div class="row">
+    		<div class="col-xs-12">
+			    
+  <div class="row">
+    <div class="col-xs-12">
+      <ol class = "breadcrumb">
+         <li><a href = ../../index.html>Главная</a></li>
+         <li class = "active">Полезные приёмы</li>
+      </ol>
+    </div>
+    <div class="col-xs-12">
+       <h3>Полезные приёмы</h3>
+       <hr>
+    </div>
+  </div>
+  
+  <div class="row row-content">
+    <div class="col-xs-12 col-sm-10">
+      <p>Тут – разные мелочи, на которых обычно спотыкаются новички в Питоне. Шагай свободно.</p>
 <h3>Итерируй сразу по коллекции, а не по индексам</h3>
 <p>Раньше в C++ итерация по коллекции проходила так:</p>
 <div class="codehilite"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">books_amount</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
@@ -256,18 +261,23 @@
 и написать об этом в документации.</li>
 <li><strong>объяснять, что происходит</strong>. Если скрипт выводит друзей онлайн, он должен говорить, что это друзья пользователя,
 которые сейчас онлайн. Выводит самый большой бар – должен писать, что это – самый большой бар.</li>
-</ul></p>
+</ul>
     </div>
+  </div>
 
-    </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2016 Company, Inc.</p>
-      </footer>
-    </div> <!-- /container -->
-
+			  </div>
+			</div>
+		</div>
+    <hr>
+    <footer class="row-footer">
+      <div class="container">
+        <div class="row">             
+          <div class="col-xs-8 col-xs-offset-1">
+          	<p>&copy; 2016 Company, Inc.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     
   <!-- Bootstrap core JavaScript
   ================================================== -->

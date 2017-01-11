@@ -33,35 +33,40 @@
 <![endif]-->
 
   </head>
-
   <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="..\..\index.html">Documentation Generator</a>
+          <a class="navbar-brand" href="../../index.html">Documentation Generator</a>
         </div>
       </div>
     </nav>
-
     <div class="container">
-		
-  <ol class = "breadcrumb">
-     <li><a href = ..\..\index.html>Главная</a></li>
-     <li class = "active">Комментарии</li>
-  </ol>
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-8">
-        <h2>Комментарии</h2>
-        <p><h2>Какие бывают</h2>
+    	<div class="row">
+    		<div class="col-xs-12">
+			    
+  <div class="row">
+    <div class="col-xs-12">
+      <ol class = "breadcrumb">
+         <li><a href = ../../index.html>Главная</a></li>
+         <li class = "active">Комментарии</li>
+      </ol>
+    </div>
+    <div class="col-xs-12">
+       <h3>Комментарии</h3>
+       <hr>
+    </div>
+  </div>
+  
+  <div class="row row-content">
+    <div class="col-xs-12 col-sm-10">
+      <h2>Какие бывают</h2>
 <h3>Обычные комментарии</h3>
 <p>Комментарии – способ прокомментировать код на ходу, на той же строке. </p>
 <div class="codehilite"><pre><span></span><span class="n">price</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">BigInteger</span><span class="p">)</span>  <span class="c1"># рубли * 100</span>
@@ -148,18 +153,23 @@
 <li><a href="https://www.python.org/dev/peps/pep-0257/">PEP 257</a>. ПЕП про докстринги.</li>
 <li><a href="https://docs.python.org/3.5/library/doctest.html">doctest</a>. Документация к модулю про доктесты.</li>
 <li><a href="http://stackoverflow.com/questions/184618/">What is the best comment in source code you have ever encountered?</a>. Шутить в коде не стоит, а вот посмеяться с чужих шуток можно. Это ж не нам поддерживать.</li>
-</ul></p>
+</ul>
     </div>
+  </div>
 
-    </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2016 Company, Inc.</p>
-      </footer>
-    </div> <!-- /container -->
-
+			  </div>
+			</div>
+		</div>
+    <hr>
+    <footer class="row-footer">
+      <div class="container">
+        <div class="row">             
+          <div class="col-xs-8 col-xs-offset-1">
+          	<p>&copy; 2016 Company, Inc.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     
   <!-- Bootstrap core JavaScript
   ================================================== -->

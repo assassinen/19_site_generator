@@ -33,35 +33,40 @@
 <![endif]-->
 
   </head>
-
   <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="..\..\index.html">Documentation Generator</a>
+          <a class="navbar-brand" href="../../index.html">Documentation Generator</a>
         </div>
       </div>
     </nav>
-
     <div class="container">
-		
-  <ol class = "breadcrumb">
-     <li><a href = ..\..\index.html>Главная</a></li>
-     <li class = "active">Типы данных</li>
-  </ol>
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-8">
-        <h2>Типы данных</h2>
-        <p><h3>Числа</h3>
+    	<div class="row">
+    		<div class="col-xs-12">
+			    
+  <div class="row">
+    <div class="col-xs-12">
+      <ol class = "breadcrumb">
+         <li><a href = ../../index.html>Главная</a></li>
+         <li class = "active">Типы данных</li>
+      </ol>
+    </div>
+    <div class="col-xs-12">
+       <h3>Типы данных</h3>
+       <hr>
+    </div>
+  </div>
+  
+  <div class="row row-content">
+    <div class="col-xs-12 col-sm-10">
+      <h3>Числа</h3>
 <p>В самом Питоне есть целые, вещественные, и комплексные числа. В стандартной библиотеке есть ещё рациональные и
 фиксированной точности.</p>
 <p>У целых чисел нет подводных камней: у них нет ограничения по размеру, поддерживают стандартные арифметические действия
@@ -154,18 +159,23 @@
 <p>Один из частых случаев применения множеств – удаление дублей из списка:</p>
 <div class="codehilite"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">l</span><span class="p">)))</span>  <span class="c1"># [1, 2, 3]</span>
-</pre></div></p>
+</pre></div>
     </div>
+  </div>
 
-    </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2016 Company, Inc.</p>
-      </footer>
-    </div> <!-- /container -->
-
+			  </div>
+			</div>
+		</div>
+    <hr>
+    <footer class="row-footer">
+      <div class="container">
+        <div class="row">             
+          <div class="col-xs-8 col-xs-offset-1">
+          	<p>&copy; 2016 Company, Inc.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     
   <!-- Bootstrap core JavaScript
   ================================================== -->
