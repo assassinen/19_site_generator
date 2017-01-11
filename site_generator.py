@@ -1,3 +1,4 @@
+import html
 import json
 import os
 from pathlib import Path, PurePosixPath
@@ -11,6 +12,7 @@ TEMPLATES_FOLDER = 'templates'
 ARTICLE_TEMPLATE = 'article.html'
 INDEX_FILE = 'index.html'
 OUTPUT_FOLDER = 'pages'
+OUTPUT_INDEX_FILE = 'index.html'
 CONFIG_FILE = 'config.json'
 
 
@@ -30,8 +32,9 @@ def save_html(html, filepath):
         html_file.write(html)
 
 
-def get_html_filepath(article_path, parent_folder=''):
-    return (Path(parent_folder) / article_path).with_suffix('.html')  
+def get_html_filepath(article_path, parent_folder='docs', articles_folder=OUTPUT_FOLDER):
+    return (Path(parent_folder) / articles_folder / article_path).\
+           with_suffix('.html')  
 
 
 def init_jinja_environment():
@@ -63,12 +66,16 @@ def site_generator():
                                                       article['source']))
         rendered_html = render_article_html(template, markdown_text,
                                             article['title'])
-        html_article_path = get_html_filepath(article['source'], OUTPUT_FOLDER)
-        save_html(rendered_html, html_article_path)
-        article['source'] = PurePosixPath(html_article_path)
+        saving_article_path = get_html_filepath(article['source'],
+                                                articles_folder=OUTPUT_FOLDER)
+        save_html(rendered_html, saving_article_path)
+        article_path_for_html = get_html_filepath(article['source'],
+                                                  parent_folder='')
+        article['source'] = PurePosixPath(article_path_for_html)
     template = jinja_environment.get_template(INDEX_FILE)
     rendered_index_html = render_index_html(template, config)
-    save_html(rendered_index_html, get_html_filepath(INDEX_FILE))
+    save_html(rendered_index_html, get_html_filepath(OUTPUT_INDEX_FILE,
+                                                     articles_folder=''))
     
 
 if __name__ == '__main__':

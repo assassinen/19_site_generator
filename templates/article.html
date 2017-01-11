@@ -25,18 +25,18 @@
 {% endblock %}
 {% block header_link %}{{index_href}}{% endblock %}
 
-{% block title %}{{title}}{% endblock %}
+{% block title %}{{title|e}}{% endblock %}
 
 {% block content %}
   <div class="row">
     <div class="col-xs-12">
       <ol class = "breadcrumb">
          <li><a href = {{index_href}}>Главная</a></li>
-         <li class = "active">{{title}}</li>
+         <li class = "active">{{title|e}}</li>
       </ol>
     </div>
     <div class="col-xs-12">
-       <h3>{{title}}</h3>
+       <h3>{{title|e}}</h3>
        <hr>
     </div>
   </div>
