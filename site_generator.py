@@ -51,11 +51,12 @@ def render_article_html(template, markdown_text, article_title):
                                                        'fenced_code'])
     return template.render(title=article_title,
                            index_href=PurePosixPath('..', '..', INDEX_FILE),
-                           content=html_from_markdown)
+                           content=html_from_markdown,
+                           href_to_static='../../')
 
 
 def render_index_html(template, config):
-    return template.render(config=config)
+    return template.render(config=config, href_to_static='')
 
 
 def site_generator():
