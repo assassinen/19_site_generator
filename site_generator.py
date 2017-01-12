@@ -2,6 +2,7 @@ import html
 import json
 import os
 from pathlib import Path, PurePosixPath
+from urllib.parse import quote
 
 import jinja2
 import markdown
@@ -33,8 +34,8 @@ def save_html(html, filepath):
 
 
 def get_html_filepath(article_path, parent_folder='docs', articles_folder=OUTPUT_FOLDER):
-    return (Path(parent_folder) / articles_folder / article_path).\
-           with_suffix('.html')  
+    return (Path(parent_folder) / articles_folder /
+            article_path).with_suffix('.html')  
 
 
 def init_jinja_environment():
@@ -66,12 +67,11 @@ def site_generator():
                                                       article['source']))
         rendered_html = render_article_html(template, markdown_text,
                                             article['title'])
-        saving_article_path = get_html_filepath(article['source'],
-                                                articles_folder=OUTPUT_FOLDER)
+        saving_article_path = get_html_filepath(article['source'])
         save_html(rendered_html, saving_article_path)
         article_path_for_html = get_html_filepath(article['source'],
                                                   parent_folder='')
-        article['source'] = PurePosixPath(article_path_for_html)
+        article['source'] = quote(str(article_path_for_html.as_posix()))
     template = jinja_environment.get_template(INDEX_FILE)
     rendered_index_html = render_index_html(template, config)
     save_html(rendered_index_html, get_html_filepath(OUTPUT_INDEX_FILE,
