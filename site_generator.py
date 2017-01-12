@@ -38,7 +38,7 @@ def get_html_filepath(article_path, parent_folder='docs', articles_folder=OUTPUT
 
 
 def init_jinja_environment():
-    jinja_environment = jinja2.Environment()
+    jinja_environment = jinja2.Environment(autoescape=True)
     jinja_environment.loader = jinja2.FileSystemLoader(TEMPLATES_FOLDER)
     return jinja_environment
 

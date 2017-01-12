@@ -42,7 +42,7 @@
             <ul class="module_list">
               {% for article in config['articles'] %}
                 {% if article['topic']==topic['slug'] %}
-                  <li><a href="{{ article['source']|e }}">{{ article['title']|e }}</a></li>
+                  <li><a href="{{ article['source'] }}">{{ article['title'] }}</a></li>
                 {% endif %}
               {% endfor %}
             </ul>
